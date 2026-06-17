@@ -1,54 +1,48 @@
-// Mobile menu toggle with proper hamburger ↔ X icon change
+// Mobile menu toggle
 (function () {
-  emailjs.init({
-    publicKey: "Ks8g57G6giZvz-BmI", // public key
-  });
+emailjs.init({
+publicKey: "Ks8g57G6giZvz-BmI",
+});
 })();
 
 const menuBtn = document.getElementById("menuBtn");
 
 menuBtn.addEventListener("click", () => {
-  document.body.classList.toggle("mobile-nav-active");
-  menuBtn.classList.toggle("fa-bars");
-  menuBtn.classList.toggle("fa-xmark");
+document.body.classList.toggle("mobile-nav-active");
+menuBtn.classList.toggle("fa-bars");
+menuBtn.classList.toggle("fa-xmark");
 });
 
-// Auto-close menu when clicking a nav link
+// Auto-close menu when clicking nav links
 document.querySelectorAll("header nav a").forEach((link) => {
-  link.addEventListener("click", () => {
-    if (document.body.classList.contains("mobile-nav-active")) {
-      document.body.classList.remove("mobile-nav-active");
-      // Change X back to hamburger
-      menuBtn.classList.replace("fa-xmark", "fa-bars");
-    }
-  });
+link.addEventListener("click", () => {
+if (document.body.classList.contains("mobile-nav-active")) {
+document.body.classList.remove("mobile-nav-active");
+menuBtn.classList.replace("fa-xmark", "fa-bars");
+}
+});
 });
 
-// Your typing effect (perfect as is)
+// Insurance typing effect
 let typed = new Typed("#auto-input", {
-  strings: [
-    ".NET Developer",
-    "Azure AI Systems Engineer",
-    "Husband",
-    "Father",
-    "Skill Collector",
-    "Music Producer",
-    "Full Stack Developer",
-    "Bee Keeper",
-    "Investor",
-    "Jiu-Jitsu Purple Belt",
-  ],
-  typeSpeed: 90,
-  backSpeed: 90,
-  backDelay: 100,
-  loop: true,
+strings: [
+"Licensed Insurance Agent",
+"Indexed Universal Life Specialist",
+"Tax-Advantaged Retirement Strategies",
+"Family Protection Planning",
+"Cash Value Life Insurance",
+"Legacy Planning",
+"Pinnacle Life Group",
+"Helping Families Build Wealth",
+"Financial Protection Solutions",
+"Florida 2-15 Licensed Agent"
+],
+typeSpeed: 90,
+backSpeed: 90,
+backDelay: 100,
+loop: true,
 });
 
-// Resume Download Modal Logic
-const downloadBtn = document.getElementById("downloadResumeBtn");
-const modal = document.getElementById("resumeModal");
-const closeModal = document.getElementById("closeModal");
-const resumeForm = document.getElementById("resumeForm");
 
 // Open modal when clicking Download button
 // downloadBtn.addEventListener("click", () => {
