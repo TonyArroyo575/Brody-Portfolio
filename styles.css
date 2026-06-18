@@ -202,7 +202,7 @@ main {
     width: 100%;
     background-image:
         linear-gradient(rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.78)),
-        url('assets/images/trustlayer.png');
+        url('assets/images/tampa-skyline.avif');
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
