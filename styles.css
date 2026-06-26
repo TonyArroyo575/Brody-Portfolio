@@ -38,6 +38,8 @@ header {
 }
 
 
+/* ================= CARRIER STRIP ================= */
+
 .carrier-strip {
     position: absolute;
     top: 35px;
@@ -55,16 +57,19 @@ header {
 }
 
 .carrier-strip p {
-    color: #ffffff;
+    color: white;
+    text-align: center;
     font-size: 13px;
     font-weight: 800;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .carrier-list {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 10px;
 }
@@ -73,6 +78,7 @@ header {
     color: #d9e8ef;
     font-size: 13px;
     font-weight: 700;
+    white-space: nowrap;
 
     background: rgba(0, 137, 174, 0.18);
     border: 1px solid rgba(0, 137, 174, 0.35);
@@ -80,6 +86,61 @@ header {
     padding: 6px 12px;
 }
 
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+    .carrier-strip {
+        position: relative;
+
+        top: auto;
+        left: auto;
+        right: auto;
+
+        width: 100%;
+
+        margin-bottom: 24px;
+
+        padding: 12px 14px;
+    }
+
+    .carrier-strip p {
+        font-size: 11px;
+        margin-bottom: 10px;
+    }
+
+    .carrier-list {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        justify-content: flex-start;
+
+        gap: 8px;
+
+        padding-bottom: 6px;
+
+        scrollbar-width: none;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .carrier-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    .carrier-list span {
+        flex: 0 0 auto;
+
+        font-size: 12px;
+
+        padding: 6px 12px;
+    }
+
+    #home .home-row {
+        padding-top: 20px;
+    }
+}
 
 header .profile {
     text-align: center;
